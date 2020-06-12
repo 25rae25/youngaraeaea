@@ -14,3 +14,16 @@ function onBarClick() {
 		$(this).find(".bar3").css("animation-name", "bar3");
 	}
 }
+
+
+
+
+var slide = new Slide(".main-wrap", ".banner", "scale", onComplete);
+
+
+function onComplete(prevSlide, nextSlide, container) {
+	$(prevSlide).find(".slogan").css({"opacity": 0, "transform": "scale(0.5)"});
+	$(prevSlide).find(".writer").css({"opacity": 0, "transform": "translateY(5vw)"});
+	$(nextSlide).find(".slogan").css({"opacity": 1, "transform": "scale(1)"});
+	$(nextSlide).find(".writer").css({"opacity": 1, "transform": "translateY(0)"});
+}
