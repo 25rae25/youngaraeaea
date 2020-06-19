@@ -1,0 +1,7 @@
+{
+	"mark":[
+		{"src":"../img/spa-gallery-2.jpg","title":"Beauty","cont":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus eur ridiculus mus.","sub":"more..."},
+		{"src":"../img/spa-gallery-1.jpg","title":"Fitness","cont":"Donec pede justo, fringilla vel, aliqcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.","sub":"more..."},
+		{"src":"../img/spa-gallery-5-2.jpg","title":"Yoga","cont":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus eur ridiculus mus.","sub":"more..."}
+	]
+}

@@ -1,52 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500&display=swap');
+/* font-family: 'Maven Pro', sans-serif;
+ */
 
 body {height: 5000px;}
+.rc {font-family: 'Maven Pro', sans-serif;}
+
+.title-wrap {background-color: skyblue; max-width: 1200px; display: flex; justify-content: space-between; margin: auto; flex-direction: row;}
+.title {display: flex; align-items: center;}
+.title > div {padding-right: 1rem;}
+
+.logo {border: 1px solid red;}
+.title {border: 1px solid red;}
 
 
-.bars {width: 84px; height: 88px; position: relative;  cursor: pointer; margin: auto;}
-.bar {width: 36px; height: 3px; background-color: aqua; position: absolute; transform-origin: center; animation-duration: 1s; animation-fill-mode: forwards;}
-.bar1 {top: 33px; left: 24px;}
-.bar2 {top: 43px; left: 24px;}
-.bar3 {top: 53px; left: 24px;}
+.main-wrap {width: 100%; height: 100vh; position: relative; overflow: hidden;}
+.main-wrap .banner {width: 100%; height: 100%; position: absolute; background-position: center; background-repeat: no-repeat; background-size: cover; transition: all 0.5s;}
+.main-wrap > .banner1 {background-image: url(../img/banner-med1.jpg);}
+.main-wrap > .banner2 {background-image: url(../img/banner-med2.jpg);}
 
-@keyframes bar1 {
-	0% {}
-	40% {top: 43px; transform: rotate(0deg)}
-	100% {top: 43px; transform: rotate(-225deg);}
-}
-@keyframes bar2 {
-	0% {opacity: 1;}
-	40% {opacity: 0;}
-	100% {opacity: 0;}
-}
-@keyframes bar3 {
-	0% {}
-	40% {top: 43px; transform: rotate(0deg);}
-	100% {top: 43px; transform: rotate(-135deg);}
-}
+.main-wrap .bt {font-size: 7rem; color: #fff; position: absolute; z-index: 900; top: 50%;
+transform: translateY(-50%); cursor: pointer; transition: all 0.5s;}
+.main-wrap .bt.bt-prev {left: 2rem;}
+.main-wrap .bt.bt-next {right: 2rem;}
+.main-wrap .bt.bt-prev::after {content: '〈'; display: block;}
+.main-wrap .bt.bt-next::after {content: '〉'; display: block;}
 
-@keyframes bar1-rev {
-	0% {top: 43px; transform: rotate(-225deg);}
-	60% {top: 43px; transform: rotate(0deg);}
-	100% {top: 33px; transform: rotate(0deg);}
+.middle-wrap {max-width: 1200px; border: 1px solid red; margin: 10rem auto; text-align: center;
 }
-@keyframes bar2-rev {
-	0% {opacity: 0;}
-	60% {opacity: 0;}
-	100% {opacity: 1;}
-}
-@keyframes bar3-rev {
-	0% {top: 43px; transform: rotate(-135deg);}
-	60% {top: 43px; transform: rotate(0deg);}
-	100% {top: 53px; transform: rotate(0deg);}
-}
+.middle-cont {font-size: 3rem; margin: 2rem 0;}
+.middle-sub {color: #ccc; font-size: 1.15rem; line-height: 2rem;}
 
+/******************** mark-wrap *********************/
+.wrapper {width: 1600px; margin: auto; border: 1px solid red;}
+.wrapper .mark-wrap  {display: flex; justify-content: space-between;} 
+.wrapper .mark {flex: 33.3% 0 0; text-align: left; padding: 0 1rem;}
+.wrapper .ma-tit {font-size: 2.5rem; padding: 1rem 0;}
+.wrapper .ma-cont {padding: 1rem 0; color: #ccc; line-height: 1.75rem;}
+.wrapper .ma-sub {color: pink;}
 
-.main-wrap {width: 100%; height: 100vh; position: relative;}
-.main-wrap .banner {width: 100%; height: 100%; position: absolute; background-color: #111; 
-background-position: center; background-repeat: no-repeat; background-size: cover; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #fff;} 
-.main-wrap .banner1 {background-image: url(../img/c-sl-000.jpg);} 
-.main-wrap .banner2 {background-image: url(../img/c-sl-004.jpg);} 
-.main-wrap .banner3 {background-image: url(../img/c-sl-005.jpg);} 
-.main-wrap .symbol {width: 20vw; margin-bottom: 1rem;}
-.main-wrap .slogan {font-size: 4vw; text-align: center; margin-bottom: 1rem; transition: all 0.5s; transform: scale(1); opacity: 1;}
-.main-wrap .writer {font-size: 1.5vw; color: #f7ba4a; transition: all 0.5s; transform: translateY(0); opacity: 1;}
+ 
+/******************** mark-wrap *********************/
+.menu-wrap {width: 100%; height: 6%; background: #e7b8b8 url(../img/banner2-845x321.jpg) no-repeat; border: 1px solid red; margin: 7rem 0;}
+.menu-wrap {display: flex; justify-content: center; align-items: center;
+flex-direction: column; margin: 3rem auto; color: #fff;}
+.menus {display: flex; justify-content: space-between; border: 1px solid red;}
+.m-form {padding: 0 1rem; border: 1px solid #fff; padding: 24px 32px;}
+.menu-tit {margin: 2rem 0; font-size: 2rem;}

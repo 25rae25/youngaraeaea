@@ -1,29 +1,72 @@
-$(".header .bars").click(onBarClick);
+var mainNow = 0;
+var mainSlide = $(".main-wrap > .banner");
+var mainLast = mainSlide.length - 1;
+var mainSubs = [
+	"The best rated SPA in New <br> York",
+	"Register now for our beauty <br> program"
+];
+var mainConts = ["Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean<br> comor.", "Lorem ipsum dolor adipiscing elit. Aenean commodo ligula eget dolor."];
+$(".main-wrap").find(".sub").html(mainSubs[mainNow]);
+$(".main-wrap").find(".cont").html(mainConts[mainNow]);
+mainInit();
 
-function onBarClick() {
-	if($(this).hasClass("active")) {
-		$(this).removeClass("active");
-		$(this).find(".bar1").css("animation-name", "bar1-rev");
-		$(this).find(".bar2").css("animation-name", "bar2-rev");
-		$(this).find(".bar3").css("animation-name", "bar3-rev");
-	}
-	else {
-		$(this).addClass("active");
-		$(this).find(".bar1").css("animation-name", "bar1");
-		$(this).find(".bar2").css("animation-name", "bar2");
-		$(this).find(".bar3").css("animation-name", "bar3");
+function mainInit() {
+	$(".main-wrap > banner").remove();
+	$(mainSlide[mainNow]).appendTo(".main-wrap");
+}
+
+function mainAni() {
+	var slide = $(mainSlide[mainNow]).appendTo(".main-wrap").css({"transform": "scale(1.3)", "opacity": 0});
+	setTimeout(function(){
+		slide.css({"transform": "scale(1)", "opacity": 1});
+	}, 0);
+	setTimeout(mainInit, 500);
+	$(".main-wrap").find(".sub").css({"transform": "scale(0.8)", "opacity": 0});
+	$(".main-wrap").find(".cont").css({"transform": "translateY(50px)", "opacity": 0});
+	setTimeout(function(){
+		$(".main-wrap").find(".sub").html(mainTitles[mainNow]);
+		$(".main-wrap").find(".cont").html(mainWriters[mainNow]);
+		$(".main-wrap").find(".sub").css({"transform": "scale(1)", "opacity": 1});
+		$(".main-wrap").find(".cont").css({"transform": "translateY(0)", "opacity": 1});
+	}, 1000);
+}
+
+
+function onMainPrev() {
+	// 1. 나타날 슬라이드의 번호(mainNow)를 찾아낸다.
+	mainNow = (mainNow == 0) ? mainLast : mainNow - 1;
+	mainAni();
+}
+function onMainNext() {
+	// 1. 나타날 슬라이드의 번호(mainNow)를 찾아낸다.
+	mainNow = (mainNow == mainLast) ? 0 : mainNow + 1;
+	mainAni();
+}
+
+$("main-wrap .bt-prev").click(onMainPrev);
+$("main-wrap .bt-next").click(onMainNext);
+
+
+
+
+
+
+$.get("../json/mark.json", onMarkLoad);
+function onMarkLoad(r) {
+	var html;
+	for(var i in r.mark) {
+	html  =  '<li class="mark">';
+	html += '<div class="ma-pic"><img src="'+r.mark[i].src+'" class="img"></div>';
+	html += '<div class="ma-tit">'+r.mark[i].title+'</div>';
+	html += '<div class="ma-cont">'+r.mark[i].cont+'</div>';
+	html += '<div class="ma-sub">'+r.mark[i].sub+'</div>';
+	html += '</li>';
+	$(".mark-wrap").append(html);
 	}
 }
 
 
 
 
-var slide = new Slide(".main-wrap", ".banner", "scale", onComplete);
 
 
-function onComplete(prevSlide, nextSlide, container) {
-	$(prevSlide).find(".slogan").css({"opacity": 0, "transform": "scale(0.5)"});
-	$(prevSlide).find(".writer").css({"opacity": 0, "transform": "translateY(5vw)"});
-	$(nextSlide).find(".slogan").css({"opacity": 1, "transform": "scale(1)"});
-	$(nextSlide).find(".writer").css({"opacity": 1, "transform": "translateY(0)"});
-}
