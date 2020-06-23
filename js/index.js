@@ -41,8 +41,8 @@ function onMainNext() {
 	mainAni();
 }
 
-$("main-wrap .bt-prev").click(onMainPrev);
-$("main-wrap .bt-next").click(onMainNext);
+$(".main-wrap .bt-prev").click(onMainPrev);
+$(".main-wrap .bt-next").click(onMainNext);
 
 
 

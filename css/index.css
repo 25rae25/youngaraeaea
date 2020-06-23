@@ -64,5 +64,5 @@ padding: 3rem; line-height: 1.75rem;}
 
 
 /******************** bottom-wrap *********************/
-.bottom-wrap {max-width: 1400px; margin: 7rem auto; border: 1px solid red; display: flex;}
+.bottom-wrap {max-width: 1400px;  margin: 7rem auto; border: 1px solid red; display: flex;}
 .bottom {display: flex; justify-content: space-between;}
