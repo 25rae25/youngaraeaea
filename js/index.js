@@ -24,8 +24,8 @@ function mainAni() {
 	$(".main-wrap").find(".sub").css({"transform": "scale(0.8)", "opacity": 0});
 	$(".main-wrap").find(".cont").css({"transform": "translateY(50px)", "opacity": 0});
 	setTimeout(function(){
-		$(".main-wrap").find(".sub").html(mainTitles[mainNow]);
-		$(".main-wrap").find(".cont").html(mainWriters[mainNow]);
+		$(".main-wrap").find(".sub").html(mainSubs[mainNow]);
+		$(".main-wrap").find(".cont").html(mainConts[mainNow]);
 		$(".main-wrap").find(".sub").css({"transform": "scale(1)", "opacity": 1});
 		$(".main-wrap").find(".cont").css({"transform": "translateY(0)", "opacity": 1});
 	}, 1000);
@@ -33,12 +33,10 @@ function mainAni() {
 
 
 function onMainPrev() {
-	// 1. 나타날 슬라이드의 번호(mainNow)를 찾아낸다.
 	mainNow = (mainNow == 0) ? mainLast : mainNow - 1;
 	mainAni();
 }
 function onMainNext() {
-	// 1. 나타날 슬라이드의 번호(mainNow)를 찾아낸다.
 	mainNow = (mainNow == mainLast) ? 0 : mainNow + 1;
 	mainAni();
 }
@@ -50,7 +48,7 @@ $("main-wrap .bt-next").click(onMainNext);
 
 
 
-
+/******************** mark-wrap *********************/
 $.get("../json/mark.json", onMarkLoad);
 function onMarkLoad(r) {
 	var html;
