@@ -21,8 +21,8 @@ function mainAni() {
 		slide.css({"transform": "scale(1)", "opacity": 1});
 	}, 0);
 	setTimeout(mainInit, 500);
-	$(".main-wrap").find(".sub").css({"transform": "scale(0.8)", "opacity": 0});
-	$(".main-wrap").find(".cont").css({"transform": "translateY(50px)", "opacity": 0});
+	$(".main-wrap .main").find(".sub").css({"transform": "scale(0.8)", "opacity": 0});
+	$(".main-wrap .main").find(".cont").css({"transform": "translateY(50px)", "opacity": 0});
 	setTimeout(function(){
 		$(".main-wrap").find(".sub").html(mainSubs[mainNow]);
 		$(".main-wrap").find(".cont").html(mainConts[mainNow]);

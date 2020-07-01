@@ -15,19 +15,26 @@ body {height: 5000px;}
 .logo {font-size: 1;}
 
 
-
+/******************** main-wrap *********************/
 .main-wrap {width: 100%; height: 100vh; position: relative; overflow: hidden;}
 .main-wrap .banner {width: 100%; height: 100%; position: absolute; background-position: center; background-repeat: no-repeat; background-size: cover; transition: all 0.5s;}
 .main-wrap > .banner1 {background-image: url(../img/banner-med1.jpg);}
 .main-wrap > .banner2 {background-image: url(../img/banner-med2.jpg);}
+.main-wrap .main {border: 1px solid red; position: absolute; top: 50%; left: 50%; z-index: 90; display: flex; flex-direction: column; justify-items: center; align-content: center;
+color: #fff;}
+.main-wrap .sub {font-size: 2rem;}
+.main-wrap .cont {font-size: 1.25rem; padding: 1rem 0;}
+
+/* width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 890; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #fff; background-color: rgba(0,0,0,0.4); */
 
 .main-wrap .bt {font-size: 7rem; color: #fff; position: absolute; z-index: 900; top: 50%;
-transform: translateY(-50%); cursor: pointer; transition: all 0.5s;}
+transform: translateY(-50%); cursor: pointer; transition: all 0.5s; /* border: 1px solid #fff; */}
 .main-wrap .bt.bt-prev {left: 2rem;}
 .main-wrap .bt.bt-next {right: 2rem;}
 .main-wrap .bt.bt-prev::after {content: '〈'; display: block;}
 .main-wrap .bt.bt-next::after {content: '〉'; display: block;}
 
+/******************** middle-wrap *********************/
 .middle-wrap {max-width: 1200px;  margin: 10rem auto; text-align: center;
 }
 .middle-cont {font-size: 3rem; margin: 2rem 0;}
@@ -42,11 +49,11 @@ transform: translateY(-50%); cursor: pointer; transition: all 0.5s;}
 .wrapper .ma-sub {color: pink;}
 
  
-/******************** mark-wrap *********************/
+/******************** menu-wrap *********************/
 .menu-wrap {width: 100%; height: 6%; background: #e7b8b8 url(../img/banner2-845x321.jpg) no-repeat; ; margin: 7rem 0;}
 .menu-wrap {display: flex; justify-content: center; align-items: center;
 flex-direction: column; margin: 3rem auto; color: #fff;}
-.menus {display: flex; justify-content: space-between; border: 1px solid red; padding: 0 2rem;}
+.menus {display: flex; justify-content: space-between; padding: 0 2rem;}
 .m-form {padding: 0 1rem; border: 1px solid #fff; padding: 24px 64px;}
 .menu-tit {margin: 2rem 0; font-size: 2rem;}
 
@@ -64,5 +71,24 @@ padding: 3rem; line-height: 1.75rem;}
 
 
 /******************** bottom-wrap *********************/
-.bottom-wrap {max-width: 1400px;  margin: 7rem auto; border: 1px solid red; display: flex;}
-.bottom {display: flex; justify-content: space-between;}
+.bottom-wrap {max-width: 1400px; margin: 7rem auto; border: 1px solid red; display: flex;}
+.bottom {justify-content: space-between;}
+.bottom > .bt-img {flex: 31.3333% 0 0; margin: 1%;}
+
+
+/******************** last-wrap *********************/
+.last {width: 100%; border: 1px solid red; background-color: #fcfcfc; position: relative;}
+.last-wrap {max-width: 1400px; margin: 8rem auto; border: 1px solid red; font-family: 'Maven Pro', sans-serif;}
+.last-wrap >.last-tit {text-align: center; font-size: 1.5rem;}
+.last-wrap .slide {text-align: center; font-size: 1.25rem; padding: 2rem 0; color: #b0b0b0;}
+.last-wrap .bt {font-size: 4rem; color: #000; position: absolute; z-index: 900; top: 50%;
+transform: translateY(-50%); cursor: pointer; transition: all 0.5s;}
+.last-wrap .bt.bt-prev {left: 2rem;}
+.last-wrap .bt.bt-next {right: 2rem;}
+.slide .writer {padding-top: 2rem; color: #000;}
+
+
+/******************** footer *********************/
+.footer {max-width: 1400px; border: 1px solid red; margin: auto; padding: 7rem 0;
+display: flex;}
+.footer-wrap {border: 1px solid red; justify-content: space-between ;}
