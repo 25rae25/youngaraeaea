@@ -17,6 +17,8 @@ function mainInit() {
 
 function mainAni() {
 	var slide = $(mainSlide[mainNow]).appendTo(".main-wrap").css({"transform": "scale(1.3)", "opacity": 0});
+	var leftValue = slide.data("pos");
+	$(".main").css("left", leftValue);
 	setTimeout(function(){
 		slide.css({"transform": "scale(1)", "opacity": 1});
 	}, 0);
@@ -41,8 +43,24 @@ function onMainNext() {
 	mainAni();
 }
 
+function onScroll() {
+	var sct = $(this).scrollTop();
+	if(sct > 100) {
+		$(".title-wrapper").addClass("active");
+		$(".title-wrapper img.black").css("opacity", 1);
+	}
+	else {
+		$(".title-wrapper").removeClass("active");
+		$(".title-wrapper img.black").css("opacity", 0);
+	}
+}
+
+
 $(".main-wrap .bt-prev").click(onMainPrev);
 $(".main-wrap .bt-next").click(onMainNext);
+
+
+$(window).scroll(onScroll);
 
 
 
