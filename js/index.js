@@ -56,13 +56,6 @@ function onScroll() {
 }
 
 
-$(".main-wrap .bt-prev").click(onMainPrev);
-$(".main-wrap .bt-next").click(onMainNext);
-
-
-$(window).scroll(onScroll);
-
-
 
 
 
@@ -80,7 +73,35 @@ function onMarkLoad(r) {
 	$(".mark-wrap").append(html);
 	}
 }
+/******************** last-wrap *********************/
+var lastNow = 0
+var lastSlide = $(".last-wrap > .slide");
+var lastLast = lastSlide.length - 1;
 
+
+$(".last-wrap .bt-prev").click(onLastPrev);
+$(".last-wrap .bt-next").click(onLastNext);
+
+function onLastPrev() {
+	lastNow = (lastNow == 0) ? lastLast : lastNow - 1;
+	lastAni();
+}
+
+function onLastNext() {
+	lastNow = (lastNow == lastLast) ? 0 : lastNow + 1;
+	lastAni();
+}
+
+function lastAni() {
+	$lastSlide.css("opacity", 0);
+	$lastSlide.eq(lastNow).css("opacity", 1);
+}
+
+
+/******************** 이벤트 설정 *********************/
+$(".main-wrap .bt-prev").click(onMainPrev);
+$(".main-wrap .bt-next").click(onMainNext);
+$(window).scroll(onScroll);
 
 
 

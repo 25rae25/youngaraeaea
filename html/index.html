@@ -12,6 +12,7 @@
 	<script src="../js/jquery-3.5.1.min.js"></script>
 	<script src="../js/imagesloaded.pkgd.min.js"></script>
 	<script src="../js/moment.min.js"></script>
+	<script src="../js/wow.min.js"></script>
 	<script src="../js/slide.js"></script>
 </head>
 <body>
@@ -31,7 +32,7 @@
 
 		<section class="main-wrap rc">
 			<article class="banner banner1" data-pos="10%"></article>
-			<article class="banner banner2" data-pos="50%"></article>
+			<article class="banner banner2" data-pos="45%"></article>
 			<div class="main">
 				<div class="sub"></div>
 				<div class="cont"></div>
@@ -78,7 +79,7 @@
 
 		<section class="bottom-wrap clear">
 			<div class="bottom">
-				<div class="bt-img"><img src="../img/sauna_woman-468x705.jpg" class="img"></div>
+				<div class="bt-img"><img src="../img/fix-sauna_woman-468x705.jpg" class="img"></div>
 			</div>
 			<div class="bottom">
 				<div class="bt-img"><img src="../img/towels-705x470.jpg" class="img"></div>
@@ -105,10 +106,17 @@
 						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 						<p class="writer">Macky Mac</p>
 					</div>
+				</div>	
+				<div class="slides">
+					<div class="slide">
+						Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+						<p class="writer">Franco Moriti</p>
+					</div>
 				</div>
-				<div class="bt bt-prev">&lt;</div>
-				<div class="bt bt-next">&gt;</div>		 
+				<div class="bt bt-prev">〈</div>
+				<div class="bt bt-next">〉</div>		 
 			</div>
+		</div>	
 		</section>
 
 		<footer>
@@ -116,6 +124,16 @@
 				<div class="footer-wrap">
 					<h3 class="fo-tit">Interesting Links</h3>
 					<div class="fo-cont">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</div>
+					<div class="links clear">
+						<div class="link twitter">
+						<div class="icon"><i class="fab fa-twitter"></i></div>
+							<div class="desc">	Follow<br><span>on Twitter</span></div>
+						</div>
+						<div class="link rss">
+							<div class="icon"><i class="fa fa-rss"></i></div>
+							<div class="desc">Subscribe<br><span>to RSS Feed</span></div>
+						</div>
+					</div>
 				</div>
 				<div class="footer-wrap">
 					<h3 class="fo-tit">Enfold Spa</h3>
@@ -133,8 +151,15 @@
 					</div>
 				</div>
 			</div>
+			
+			<div class="copy-right">
+				© Copyright - Enfold Spa Demo - Enfold WordPress Theme by Kriesi
+			</div>
 		</footer>
 
+		<script>
+			new WOW().init();
+		</script>
 	<script src="../js/index.js"></script>
 </body>
 </html>
